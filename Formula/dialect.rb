@@ -11,7 +11,7 @@
 class Dialect < Formula
   desc "AI-native localization toolkit for Flutter-led teams"
   homepage "https://dialect.tools"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   # Only Apple-Silicon macOS and x86_64 Linux are published as binaries.
@@ -19,13 +19,13 @@ class Dialect < Formula
   on_macos do
     odie "dialect: no prebuilt macOS x86_64 binary is published; build from source: https://github.com/ChauCM/dialect#build-from-source" unless Hardware::CPU.arm?
     url "https://github.com/ChauCM/dialect/releases/download/v#{version}/dialect-macos-arm64.tar.gz"
-    sha256 "cbb82466003557fd7b2b4ed1653d2eeabebb184c355e3793a3cb5d151d9c5799"
+    sha256 "f057d0f9e5f2c8e4d4099a93482c335c30f877584d90c4cf155c3a3dad75ce02"
   end
 
   on_linux do
     odie "dialect: no prebuilt Linux arm64 binary is published; build from source: https://github.com/ChauCM/dialect#build-from-source" if Hardware::CPU.arm?
     url "https://github.com/ChauCM/dialect/releases/download/v#{version}/dialect-linux-x64.tar.gz"
-    sha256 "89f0748eb8d9432b927767a29eb6a743d0cb3b8d1821414dcd299939cd7f2011"
+    sha256 "c6382a3a1ad74ca573a04df56a1d4e1a8193c5743fbe66b465de23efe67e2d9c"
   end
 
   def install
